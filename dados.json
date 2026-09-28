@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "cidade": "Campinas",
+        "tipo_evento": "Onda de calor",
+        "temperatura_maxima": 38.7,
+        "data": "2026-09-23",
+        "nivel_impacto": "Alto"
+    },
+    {
+        "id": 2,
+        "cidade": "São Paulo",
+        "tipo_evento": "Enchente",
+        "temperatura_maxima": 24.7,
+        "data": "2026-03-15",
+        "nivel_impacto": "Alto"
+    },
+    {
+        "id": 3,
+        "cidade": "Limeira",
+        "tipo_evento": "Deslizamento",
+        "temperatura_maxima": 23.8,
+        "data": "2025-10-02",
+        "nivel_impacto": "Médio"
+    }
+]
+ 

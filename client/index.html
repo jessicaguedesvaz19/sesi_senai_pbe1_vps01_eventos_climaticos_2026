@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Eventos Climáticos</title>
+
+
+</head>
+
+<body>
+
+
+<header>
+
+    <h1>Registro de Eventos Climáticos Extremos</h1>
+
+</header>
+
+<main>
+
+    <section>
+
+        <form action="http://localhost:3000/eventos" method="post">
+
+            <input type="text" name="cidade" placeholder="Nome da Cidade" required>
+
+            <input type="text" name="tipo_evento" placeholder="Tipo de Evento" required>
+
+            <input type="number" step="0.1" name="temperatura_maxima" placeholder="Temperatura Máxima" required>
+
+            <input type="date" name="data" required>
+
+            <input type="text" name="nivel_impacto" placeholder="Nível de Impacto" required>
+
+            <input type="submit" value="Enviar">
+
+        </form>
+
+    </section>
+
+    <section>
+
+            <tbody id="tabela">
+
+                <script>
+
+                    fetch("http://localhost:3000/eventos")
+
+                    .then(resp => resp.json())
+
+                    .then(resp => {
+
+                        resp.forEach(p => {
+
+                            const linha = document.createElement("tr")
+
+                            linha.innerHTML = `
+
+                            <td>${p.cidade}</td>
+
+                            <td>${p.tipo_evento}</td>
+
+                            <td>${p.temperatura_maxima} °C</td>
+
+                            <td>${p.data}</td>
+
+                            <td>${p.nivel_impacto}</td>
+
+                            `
+
+                            tabela.appendChild(linha)
+
+                        })
+
+                    })
+
+                </script>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <h2>By Jessica</h2>
+
+</footer>
+
+
+</body>
+
+</html>
