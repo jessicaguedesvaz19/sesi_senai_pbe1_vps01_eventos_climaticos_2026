@@ -107,7 +107,6 @@ app.use(express.json());
 
 const porta = 3000;
 
-
 app.get("/", (req, res) => {
     res.send("Servidor funcionando! Acesse /eventos para ver os eventos.");
 });
